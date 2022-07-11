@@ -221,13 +221,11 @@ export default class CosmosAPI {
     await this.dataReady
     const [
       votes,
-      deposits,
       tally,
       tallyingParameters,
       depositParameters,
     ] = await Promise.all([
       this.query(`gov/proposals/${proposal.id}/votes`),
-      this.query(`gov/proposals/${proposal.id}/deposits`),
       this.query(`gov/proposals/${proposal.id}/tally`),
       this.query(`gov/parameters/tallying`),
       this.query(`gov/parameters/deposit`),
