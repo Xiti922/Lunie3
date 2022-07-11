@@ -4,8 +4,8 @@ export default {
   description: 'Agoric is a cryptoeconomy with JS smart contracts.',
   logo: `homescreen400.png`,
   website: 'https://agoric.com',
-  apiURL: 'https://api-chronic.zenchainlabs.io/' , // use `npx lcp --proxyUrl http://34.123.30.100:1317`
-  rpcURL: 'wss://rpc-chronic.zenchainlabs.io/',
+  apiURL: 'https://api-chronic.zenchainlabs.io' , // use `npx lcp --proxyUrl http://34.123.30.100:1317`
+  rpcURL: 'wss://rpc-chronic.zenchainlabs.io',
   stakingDenom: 'CHT',
   coinLookup: [
     {
