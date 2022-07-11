@@ -13,7 +13,7 @@ export default class CosmosAPI {
   constructor(axios) {
     this.axios = axios // passed in here to use Nuxt $axios instance
     this.network = network
-    this.reducers = reducers
+    this.reducers = reducers/
 
     // system to stop queries to proceed if store data is not yet available
     this.dataReady = new Promise((resolve) => {
@@ -224,13 +224,11 @@ export default class CosmosAPI {
     await this.dataReady
     const [
       votes,
-      deposits,
       tally,
       tallyingParameters,
       depositParameters,
     ] = await Promise.all([
       this.query(`gov/proposals/${proposal.id}/votes`),
-      this.query(`gov/proposals/${proposal.id}/deposits`),
       this.query(`gov/proposals/${proposal.id}/tally`),
       this.query(`gov/parameters/tallying`),
       this.query(`gov/parameters/deposit`),
