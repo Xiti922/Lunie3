@@ -1,29 +1,29 @@
 export default {
-  id: 'cosmos-hub-testnet', // DEPRECATE, only used for Lunie extension, NOT CHAIN ID
-  name: 'Agoric Stage',
+  id: 'morocco-1', // DEPRECATE, only used for Lunie extension, NOT CHAIN ID
+  name: 'Chronic Chain',
   description: 'Agoric is a cryptoeconomy with JS smart contracts.',
   logo: `homescreen400.png`,
   website: 'https://agoric.com',
-  apiURL: 'https://stage.api.agoric.net', // use `npx lcp --proxyUrl http://34.123.30.100:1317`
-  rpcURL: 'wss://stage.rpc.agoric.net',
-  stakingDenom: 'BLD',
+  apiURL: 'https://api-chronic.zenchainlabs.io/' , // use `npx lcp --proxyUrl http://34.123.30.100:1317`
+  rpcURL: 'wss://rpc-chronic.zenchainlabs.io/',
+  stakingDenom: 'CHT',
   coinLookup: [
     {
-      viewDenom: 'BLD',
-      chainDenom: 'ubld',
+      viewDenom: 'CHT',
+      chainDenom: 'ucht',
       chainToViewConversionFactor: 1e-6,
       icon: `/currencies/bld.png`,
     },
     {
-      viewDenom: 'RUN',
-      chainDenom: 'urun',
+      viewDenom: 'CGAS',
+      chainDenom: 'ucgas',
       chainToViewConversionFactor: 1e-6,
       icon: `/currencies/run.png`,
     },
   ],
-  addressPrefix: 'agoric',
-  validatorAddressPrefix: 'agoricvaloper',
-  validatorConsensusaddressPrefix: 'agoricvalcons', // needed to map validators from staking queries to the validator set
+  addressPrefix: 'chronic',
+  validatorAddressPrefix: 'chronicvaloper',
+  validatorConsensusaddressPrefix: 'chronicvalcons', // needed to map validators from staking queries to the validator set
   HDPath: `m/44'/564'/0'/0/0`,
   lockUpPeriod: `21 days`,
   fees: {
@@ -31,7 +31,7 @@ export default {
       gasEstimate: 350000,
       feeOptions: [
         {
-          denom: 'RUN',
+          denom: 'CGAS',
           amount: 0.001,
         },
       ],
