@@ -625,3 +625,4 @@ function percentage(x, total) {
     ? BigNumber(x).div(total).toNumber().toFixed(4)
     : 0
 }
+
