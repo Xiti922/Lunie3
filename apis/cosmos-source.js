@@ -226,11 +226,11 @@ export default class CosmosAPI {
       tallyingParameters,
       depositParameters,
     ] = await Promise.all([
-      this.query(`/gov/proposals/${proposal.id}/votes`),
-      this.query(`/gov/proposals/${proposal.id}/deposits`),
-      this.query(`/gov/proposals/${proposal.id}/tally`),
-      this.query(`/gov/parameters/tallying`),
-      this.query(`/gov/parameters/deposit`),
+      this.query(`gov/proposals/${proposal.id}/votes`),
+      this.query(`gov/proposals/${proposal.id}/deposits`),
+      this.query(`gov/proposals/${proposal.id}/tally`),
+      this.query(`gov/parameters/tallying`),
+      this.query(`gov/parameters/deposit`),
     ])
     const totalVotingParticipation = BigNumber(tally.yes)
       .plus(tally.abstain)
